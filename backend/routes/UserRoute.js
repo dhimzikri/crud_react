@@ -10,6 +10,9 @@ import {
     getUserTrader,
     getUserTradeById,
     saveUserTrade,
+    updateUserTrade,
+    deleteUserTrade,
+
 } from "../controllers/UserTradeController.js"
  
 const router = express.Router();
@@ -18,6 +21,8 @@ const router = express.Router();
 router.get('/users_trd', getUserTrader);
 router.get('/users_trd/:id', getUserTradeById);
 router.post('/users_trd', saveUserTrade);
+router.patch('/users_trd/:id', updateUserTrade);
+router.delete('/users_trd/:id', deleteUserTrade);
 // end_of_trader_route
 
 // dashboard_route

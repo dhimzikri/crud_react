@@ -1,14 +1,22 @@
 import mongoose from "mongoose";
  
 const UserTrader = mongoose.Schema({
-    name:{
+    user_name:{
+        type: String,
+        required: true
+    },
+    full_name:{
         type: String,
         required: true
     },
     sat_ker:{
         type: String,
         required: true
-    }
+    },
+    description:{
+        type: String,
+        required: true
+    },
     
     // trx_type:{
     //     type: String,
