@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Dashboard from "./Dashboard.jsx";
+// import Tes from "./Tes.jsx";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -157,7 +158,7 @@ function Navbar() {
       </nav>
 
       <header className="bg-slate-700 w-screen shadow">
-        <div className="w-screen mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div className="w-screen mx-auto py-2 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
         </div>
       </header>
@@ -174,6 +175,7 @@ function Navbar() {
           {/* <!-- Replace with your content --> */}
           <div className="px-4 py-6 sm:px-0">
             <div className="border-4 border-dashed border-gray-200 rounded-lg h-96">
+              {/* <Tes /> */}
               <Dashboard />
             </div>
           </div>

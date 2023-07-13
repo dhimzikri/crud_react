@@ -3,23 +3,23 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 // import { Transition } from "@headlessui/react";
 
-const Dashboard = () => {
-  const [users, setUser] = useState([]);
+const UserTrdList = () => {
+  const [usersTrade, setUserTrade] = useState([]);
   // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    getUsers();
+    getUserTrader();
   }, []);
 
-  const getUsers = async () => {
-    const response = await axios.get("http://localhost:5000/users");
-    setUser(response.data);
+  const getUserTrader = async () => {
+    const response = await axios.get("http://localhost:5000/users_trd");
+    setUserTrade(response.data);
   };
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/users/${id}`);
-      getUsers();
+      await axios.delete(`http://localhost:5000/users_trd/${id}`);
+      getUserTrader();
     } catch (error) {
       console.log(error);
     }
@@ -33,21 +33,21 @@ const Dashboard = () => {
               No
             </th>
             <th scope="col" className="px-6 py-3">
-              Nama
+              User Nama
             </th>
             <th scope="col" className="px-6 py-3">
-              Date
+              Full Name
             </th>
             <th scope="col" className="px-6 py-3">
-              Type
+              Satker
             </th>
             <th scope="col" className="px-6 py-3">
-              Bloomberg-ID
+              Description
             </th>
-            <th scope="col" className="px-6 py-3">
+            {/* <th scope="col" className="px-6 py-3">
               Mekanisme Transaksi
-            </th>
-            <th scope="col" className="px-6 py-3">
+            </th> */}
+            {/* <th scope="col" className="px-6 py-3">
               Issues
             </th>
             <th scope="col" className="px-6 py-3">
@@ -55,38 +55,38 @@ const Dashboard = () => {
             </th>
             <th scope="col" className="px-6 py-3">
               Status
-            </th>
+            </th> */}
             <th scope="col" className="px-6 py-3">
               Action
             </th>
           </tr>
         </thead>
         <tbody className="flex-col text-center">
-          {users.map((user, index) => (
+          {usersTrade.map((usersTrade, index) => (
             <tr
-              key={user._id}
+              key={usersTrade._id}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
               <th>{index + 1}</th>
-              <td className="px-6 py-4 font-semibold">{user.name}</td>
-              <td className="px-6 py-4">{user.date}</td>
-              <td className="px-6 py-4">{user.trx_type}</td>
-              <td className="px-6 py-4">{user.BBGfitID}</td>
-              <td className="px-6 py-4">{user.mech_trx}</td>
-              <td className="px-6 py-4">{user.issues}</td>
-              <td className="px-6 py-4">{user.note}</td>
-              <td className="px-6 py-4">{user.status}</td>
+              <td className="px-6 py-4 font-semibold">{usersTrade.user_name}</td>
+              <td className="px-6 py-4">{usersTrade.full_name}</td>
+              <td className="px-6 py-4">{usersTrade.sat_ker}</td>
+              <td className="px-6 py-4">{usersTrade.description}</td>
+              {/* <td className="px-6 py-4">{usersTrade.mech_trx}</td>
+              <td className="px-6 py-4">{usersTrade.issues}</td>
+              <td className="px-6 py-4">{usersTrade.note}</td>
+              <td className="px-6 py-4">{usersTrade.status}</td> */}
               <td className="">
                 <button>
                   <Link
-                    to={`edit/${user._id}`}
+                    to={`edit/${usersTrade._id}`}
                     className="m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded-lg"
                   >
                     Edit
                   </Link>
                 </button>
                 <button
-                  onClick={() => deleteUser(user._id)}
+                  onClick={() => deleteUser(usersTrade._id)}
                   className="m-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded-lg"
                 >
                   Delete
@@ -99,4 +99,4 @@ const Dashboard = () => {
     </div>
   );
 };
-export default Dashboard;
+export default UserTrdList;
