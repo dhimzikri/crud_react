@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
 import Navbar from "./components/Navbar";
-import Tes from "./components/Tes";
+import UserTrd from "./components/UserTrd";
  
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Navbar />} />
           <Route path="add" element={<AddUser />} />
           <Route path="edit/:id" element={<EditUser />} />
-          <Route path="user" element={<Tes />} />
+          <Route path="user" element={<UserTrd />} />
         </Routes>
       </div>
     </BrowserRouter>
