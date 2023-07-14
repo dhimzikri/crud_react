@@ -53,9 +53,9 @@ const EditUser = () => {
   };
 
   return (
-    <div className="columns mt-5">
-      <div className="column is-half">
-      <form onSubmit={updateUser}>
+    <div className="min-h-screen p-6 flex items-center justify-center">
+      <div className="container max-w-screen-lg mx-auto">
+        <form onSubmit={updateUser}>
           <div>
             <h2 className="font-semibold text-xl text-gray-600">
               Transaksi Form
@@ -140,7 +140,7 @@ const EditUser = () => {
                           onChange={(e) => setMechT(e.target.value)}
                         >
                           <option value="DirectSOA">Direct SOA</option>
-                          <option value="oms">OMS</option>
+                          <option value="OMS">OMS</option>
                         </select>
                       </div>
                     </div>

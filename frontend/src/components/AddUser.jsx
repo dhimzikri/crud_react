@@ -55,8 +55,6 @@ const AddUser = () => {
                     />
                   </div>
                 </div>
-
-                {/* <form onSubmit={saveUser}> */}
                 <div className="lg:col-span-2">
                   <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
                     <div className="md:col-span-5">
@@ -120,7 +118,7 @@ const AddUser = () => {
                           onChange={(e) => setMechT(e.target.value)}
                         >
                           <option value="DirectSOA">Direct SOA</option>
-                          <option value="oms">OMS</option>
+                          <option value="OMS">OMS</option>
                         </select>
                       </div>
                     </div>

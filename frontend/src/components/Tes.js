@@ -70,7 +70,7 @@ const Tes = () => {
                         onChange={(e) => setMechT(e.target.value)}
                       >
                         <option value="DirectSOA">Direct SOA</option>
-                        <option value="oms">OMS</option>
+                        <option value="OMS">OMS</option>
                       </select>
                     </div>
                   </div>
