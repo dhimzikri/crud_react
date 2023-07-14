@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 const AddUser = () => {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
-  const [trx_type, setTrx_type] = useState("fx");
+  const [trx_type, setTrx_type] = useState("FX");
   const [BBGfitID, setBBGfitID] = useState("");
   const [mech_trx, setMechT] = useState("DirectSOA");
   const [issues, setIssues] = useState("");
   const [note, setNote] = useState("");
-  const [status, setStatus] = useState("masuk");
+  const [status, setStatus] = useState("Masuk");
   const navigate = useNavigate();
 
   const saveUser = async (e) => {
@@ -89,13 +89,13 @@ const AddUser = () => {
                           value={trx_type}
                           onChange={(e) => setTrx_type(e.target.value)}
                         >
-                          <option value="fx">FX</option>
-                          <option value="fxMon">FXMON</option>
-                          <option value="midr">MMIDR</option>
-                          <option value="fidrL">FIDR-LIAB</option>
-                          <option value="fidrA">FIDR-ASSETS</option>
-                          <option value="liquid">LIQUIDITY</option>
-                          <option value="midr">GOLD</option>
+                          <option value="FX">FX</option>
+                          <option value="FXMON">FXMON</option>
+                          <option value="MMIDR">MMIDR</option>
+                          <option value="FIDR-LIAB">FIDR-LIAB</option>
+                          <option value="FIDR-ASSETS">FIDR-ASSETS</option>
+                          <option value="LIQUIDITY">LIQUIDITY</option>
+                          <option value="GOLD">GOLD</option>
                         </select>
                       </div>
                     </div>
@@ -154,15 +154,15 @@ const AddUser = () => {
                       />
                     </div>
                     <div className="md:col-span-2">
-                      <label for="country">Mekanisme Transaksi</label>
+                      <label for="country">Status</label>
                       <div>
                         <select
                           className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                           value={status}
                           onChange={(e) => setStatus(e.target.value)}
                         >
-                          <option value="masuk">Masuk</option>
-                          <option value="tidak_masuk">Tidak Masuk</option>
+                          <option value="Masuk">Masuk</option>
+                          <option value="Tidak Masuk">Tidak Masuk</option>
                         </select>
                       </div>
                     </div>
