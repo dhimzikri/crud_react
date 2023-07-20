@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Dashboard from "./Dashboard.jsx";
-// import Tes from "./Tes.jsx";
+// import Tes from "./Tes.jsx";c
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -35,12 +35,12 @@ function Navbar() {
                   User List
                 </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="tes"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Projects
-                  </a>
+                  </Link>
 
                   <a
                     href="#"

@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DatePicker from "react-datepicker";
 import { useNavigate } from "react-router-dom";
+import "react-datepicker/dist/react-datepicker.css";
+import moment from "moment";
 
 const AddUser = () => {
   const [name, setName] = useState("");
-  const [date, setDate] = useState("");
+  // const [date, setDate] = useState("");
   const [trx_type, setTrx_type] = useState("FX");
   const [BBGfitID, setBBGfitID] = useState("");
   const [mech_trx, setMechT] = useState("DirectSOA");
@@ -12,6 +15,7 @@ const AddUser = () => {
   const [note, setNote] = useState("");
   const [status, setStatus] = useState("Masuk");
   const navigate = useNavigate();
+  const [date, setDate] = useState();
 
   const saveUser = async (e) => {
     e.preventDefault();
@@ -71,7 +75,7 @@ const AddUser = () => {
                     <div className="md:col-span-3">
                       <label for="date">Date</label>
                       <input
-                        type="text"
+                        type="date"
                         className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
@@ -101,7 +105,7 @@ const AddUser = () => {
                     <div className="md:col-span-3">
                       <label for="bbgId">BBGfitID</label>
                       <input
-                      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         type="text"
                         value={BBGfitID}
                         onChange={(e) => setBBGfitID(e.target.value)}

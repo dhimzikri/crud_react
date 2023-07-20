@@ -6,8 +6,8 @@ const User = mongoose.Schema({
         required: true
     },
     date:{
-        type: String,
-        required: true
+        type :String,
+        required: true,
     },
     
     trx_type:{

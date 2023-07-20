@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 // import { Transition } from "@headlessui/react";
 
 const Dashboard = () => {
@@ -29,9 +30,7 @@ const Dashboard = () => {
       <table className="w-full text-sm text-gray-500 dark:text-gray-400">
         <thead className="text-md text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th className="p-2 flex-col items-center justify-center">
-              No
-            </th>
+            <th className="p-2 flex-col items-center justify-center">No</th>
             <th scope="col" className="flex-col">
               Nama
             </th>
@@ -77,7 +76,7 @@ const Dashboard = () => {
               <td className="px-6 py-4">{user.note}</td>
               <td className="px-6 py-4">{user.status}</td>
               <td className="flex-col gap-">
-                <button >
+                <button>
                   <Link
                     to={`edit/${user._id}`}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded-lg"
