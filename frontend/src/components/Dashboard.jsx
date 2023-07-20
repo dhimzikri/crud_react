@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Footer from "./Footer";
-// import { Transition } from "@headlessui/react";
 
 const Dashboard = () => {
   const [users, setUser] = useState([]);
-  // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     getUsers();

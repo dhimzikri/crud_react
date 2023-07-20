@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import { Transition } from "@headlessui/react";
 
 const UserTrdList = () => {
   const [usersTrade, setUserTrade] = useState([]);
-  // const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     getUserTrader();
@@ -44,18 +42,6 @@ const UserTrdList = () => {
             <th scope="col" className="px-6 py-3">
               Description
             </th>
-            {/* <th scope="col" className="px-6 py-3">
-              Mekanisme Transaksi
-            </th> */}
-            {/* <th scope="col" className="px-6 py-3">
-              Issues
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Note
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Status
-            </th> */}
             <th scope="col" className="px-6 py-3">
               Action
             </th>
@@ -72,10 +58,6 @@ const UserTrdList = () => {
               <td className="px-6 py-4">{usersTrade.full_name}</td>
               <td className="px-6 py-4">{usersTrade.sat_ker}</td>
               <td className="px-6 py-4">{usersTrade.description}</td>
-              {/* <td className="px-6 py-4">{usersTrade.mech_trx}</td>
-              <td className="px-6 py-4">{usersTrade.issues}</td>
-              <td className="px-6 py-4">{usersTrade.note}</td>
-              <td className="px-6 py-4">{usersTrade.status}</td> */}
               <td className="">
                 <button>
                   <Link

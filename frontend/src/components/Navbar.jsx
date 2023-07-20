@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Dashboard from "./Dashboard.jsx";
-// import Tes from "./Tes.jsx";c
 import { Link } from "react-router-dom";
 
 function Navbar() {

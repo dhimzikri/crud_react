@@ -11,9 +11,6 @@ const EditUser = () => {
   const [issues, setIssues] = useState("");
   const [note, setNote] = useState("");
   const [status, setStatus] = useState("");
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [gender, setGender] = useState("Male");
   const navigate = useNavigate();
   const { id } = useParams();
 

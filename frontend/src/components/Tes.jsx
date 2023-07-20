@@ -5,7 +5,6 @@ import "react-datepicker/dist/react-datepicker.css";
 const Tes = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
-    // <div>Tes</div>
     <DatePicker 
     selected={startDate} 
     onChange={(date) => 
