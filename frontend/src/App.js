@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import UserList from "./components/UserList";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
 import Navbar from "./components/Navbar";
 import UserTrd from "./components/UserTrd";
-// import Tes from "./components/Tes";
+import Tes from "./components/Tes";
 // import Footer from "./components/Footer";
  
 function App() {
@@ -16,7 +15,7 @@ function App() {
           <Route path="add" element={<AddUser />} />
           <Route path="edit/:id" element={<EditUser />} />
           <Route path="user" element={<UserTrd />} />
-          {/* <Route path="tes" element={<Footer />} /> */}
+          <Route path="tes" element={<Tes />} />
         </Routes>
       </div>
     </BrowserRouter>

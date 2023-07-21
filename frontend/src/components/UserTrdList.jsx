@@ -23,31 +23,29 @@ const UserTrdList = () => {
     }
   };
   return (
-    <div>
-      <table className="w-full text-sm text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-6 py-3">
-              No
-            </th>
-            <th scope="col" className="px-6 py-3">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-gray-500 dark:text-white">
+        <thead class="text-xs text-red-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr className="text-center text-white bg-slate-700">
+            <th className="px-4 py-2">No</th>
+            <th scope="col" className="px-4 py-3">
               User Nama
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-4 py-3">
               Full Name
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-4 py-3">
               Satker
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-4 py-3">
               Description
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-4 py-3">
               Action
             </th>
           </tr>
         </thead>
-        <tbody className="flex-col text-center">
+        <tbody className="text-center">
           {usersTrade.map((usersTrade, index) => (
             <tr
               key={usersTrade._id}

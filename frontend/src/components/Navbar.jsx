@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <nav className="bg-gray-800 w-screen">
+    <div className="bg-sky-950 w-screen h-screen">
+      <nav className="bg-sky-950 w-screen">
         <div className="w-screen mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -20,19 +20,19 @@ function Navbar() {
               </div>
               <div className="hidden  md:block">
                 <div className="ml-10  flex items-baseline space-x-4">
-                <Link
-                  to="/"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Dashboard
-                </Link>
+                  <Link
+                    to="/"
+                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    Dashboard
+                  </Link>
 
-                <Link
-                  to="user"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  User List
-                </Link>
+                  <Link
+                    to="user"
+                    className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    User List
+                  </Link>
 
                   <Link
                     to="tes"
@@ -158,22 +158,24 @@ function Navbar() {
 
       <header className="bg-slate-700 w-screen shadow">
         <div className="w-screen mx-auto py-2 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-white">Dashboard</h1>
         </div>
       </header>
       <main>
-        <div className="w-screen mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="w-screen mx-auto p-2 sm:px-6 lg:px-8">
           <button className="">
             <Link
               to="add"
-              className="rounded-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 border border-blue-700"
+              className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
             >
-              Add New
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Add New
+              </span>
             </Link>
           </button>
           {/* <!-- Replace with your content --> */}
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-separate border-gray-200 rounded-lg">
+          <div className="px-4 py-2 sm:px-0">
+            <div className="">
               {/* <Tes /> */}
               <Dashboard />
             </div>
