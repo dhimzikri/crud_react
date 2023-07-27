@@ -28,7 +28,7 @@ function Navbar() {
                   </Link>
 
                   <Link
-                    to="user"
+                    to="userTrd"
                     className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     User List
@@ -176,7 +176,6 @@ function Navbar() {
           {/* <!-- Replace with your content --> */}
           <div className="px-4 py-2 sm:px-0">
             <div className="">
-              {/* <Tes /> */}
               <Dashboard />
             </div>
           </div>

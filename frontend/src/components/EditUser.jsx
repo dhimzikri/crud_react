@@ -50,18 +50,16 @@ const EditUser = () => {
   };
 
   return (
-    <div className="min-h-screen p-6 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center bg-slate-700 w-screen">
       <div className="container max-w-screen-lg mx-auto">
         <form onSubmit={updateUser}>
           <div>
-            <h2 className="font-semibold text-xl text-gray-600">
-              Transaksi Form
-            </h2>
-            <p className="text-gray-500 mb-6">Untuk me-record Trade Capture</p>
+            <h2 className="font-semibold text-xl text-white">Transaksi Form</h2>
+            <p className="text-white mb-2">Untuk me-record Trade Capture</p>
 
-            <div className="bg-gray-200 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+            <div className="bg-sky-950 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
               <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3 items-center justify-center">
-                <div className="text-gray-600">
+                <div className="text-white">
                   <p className="font-medium text-lg">Detail Transaksi</p>
                   <p>Silahkan isi kolom terkait informasi Transaksi.</p>
                   <div className="">
@@ -72,9 +70,7 @@ const EditUser = () => {
                     />
                   </div>
                 </div>
-
-                {/* <form onSubmit={saveUser}> */}
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 text-white">
                   <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
                     <div className="md:col-span-5">
                       <label for="full_name">Name</label>
@@ -118,9 +114,9 @@ const EditUser = () => {
                     </div>
 
                     <div className="md:col-span-3">
-                      <label for="bbgId">BBGfitID</label>
+                      <label for="bbgId">Bloomberg ID</label>
                       <input
-                      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         type="text"
                         value={BBGfitID}
                         onChange={(e) => setBBGfitID(e.target.value)}
@@ -185,10 +181,10 @@ const EditUser = () => {
                     </div>
 
                     <div className="md:col-span-5 text-right">
-                      <div className="inline-flex items-end">
+                      <div className="inline-flex items-end relative justify-center p-0.5 mb-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 ">
                         <button
                           type="submit"
-                          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                          className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
                         >
                           Update
                         </button>

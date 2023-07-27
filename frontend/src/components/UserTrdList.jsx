@@ -26,10 +26,10 @@ const UserTrdList = () => {
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-sm text-gray-500 dark:text-white">
         <thead class="text-xs text-red-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-        <tr className="text-center text-white bg-slate-700">
+          <tr className="text-center text-white bg-slate-700">
             <th className="px-4 py-2">No</th>
             <th scope="col" className="px-4 py-3">
-              User Nama
+              User Name
             </th>
             <th scope="col" className="px-4 py-3">
               Full Name
@@ -52,24 +52,30 @@ const UserTrdList = () => {
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
             >
               <th>{index + 1}</th>
-              <td className="px-6 py-4 font-semibold">{usersTrade.user_name}</td>
+              <td className="px-6 py-4 font-semibold">
+                {usersTrade.user_name}
+              </td>
               <td className="px-6 py-4">{usersTrade.full_name}</td>
               <td className="px-6 py-4">{usersTrade.sat_ker}</td>
               <td className="px-6 py-4">{usersTrade.description}</td>
-              <td className="">
+              <td className="flex justify-center gap-2 m-2 items-center">
                 <button>
                   <Link
-                    to={`edit/${usersTrade._id}`}
-                    className="m-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded-lg"
+                    to={`/edit_trd/${usersTrade._id}`}
+                    className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
                   >
-                    Edit
+                    <span className="relative px-2 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                      Edit
+                    </span>
                   </Link>
                 </button>
                 <button
                   onClick={() => deleteUser(usersTrade._id)}
-                  className="m-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded-lg"
+                  className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400"
                 >
-                  Delete
+                  <span class="relative px-2 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    Delete
+                  </span>
                 </button>
               </td>
             </tr>

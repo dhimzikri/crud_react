@@ -11,8 +11,8 @@ export const getUserTrader = async (req, res) => {
 
 export const getUserTradeById = async (req, res) => {
     try {
-        const userTrade = await UserTrader.findById(req.params.id);
-        res.json(userTrade);
+        const userTrades = await UserTrader.findById(req.params.id);
+        res.json(userTrades);
     } catch (error) {
         res.status(404).json({message: error.message});
     }
@@ -21,8 +21,8 @@ export const getUserTradeById = async (req, res) => {
 export const saveUserTrade = async (req, res) => {
     const user = new UserTrader(req.body);
     try {
-        const inserteduser = await user.save();
-        res.status(201).json(inserteduser);
+        const insertedusertrd = await user.save();
+        res.status(201).json(insertedusertrd);
     } catch (error) {
         res.status(400).json({message: error.message});
     }
@@ -30,8 +30,8 @@ export const saveUserTrade = async (req, res) => {
 
 export const updateUserTrade = async (req, res) => {
     try {
-        const updateduser = await UserTrader.updateOne({_id:req.params.id}, {$set: req.body});
-        res.status(200).json(updateduser);
+        const updatedusertrd = await UserTrader.updateOne({_id:req.params.id}, {$set: req.body});
+        res.status(200).json(updatedusertrd);
     } catch (error) {
         res.status(400).json({message: error.message});
     }
@@ -39,8 +39,8 @@ export const updateUserTrade = async (req, res) => {
  
 export const deleteUserTrade = async (req, res) => {
     try {
-        const deleteduser = await UserTrader.deleteOne({_id:req.params.id});
-        res.status(200).json(deleteduser);
+        const deletedusertrd = await UserTrader.deleteOne({_id:req.params.id});
+        res.status(200).json(deletedusertrd);
     } catch (error) {
         res.status(400).json({message: error.message});
     }
