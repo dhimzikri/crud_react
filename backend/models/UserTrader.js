@@ -17,7 +17,6 @@ const UserTrader = mongoose.Schema({
         type: String,
         required: true
     },
-    
     // trx_type:{
     //     type: String,
     //     required: true
